@@ -1,0 +1,10 @@
+node_modules
+coverage
+drafts
+.DS_Store
+Thumbs.db
+db.json
+*.log
+public/
+.deploy*/
+source/_drafts

@@ -1,0 +1,22 @@
+.main{
+    border:solid 0px black;
+    width:1280px;
+    height:100%;
+}
+
+
+.main table{
+    width:100%;
+    font-size:1cm;
+}
+    .main table thead{
+        font-weight:bold;
+    }
+
+    .main table .red{
+        color:red;
+    }
+
+    .main table .green{
+        color:green;
+    }
