@@ -1,27 +1,12 @@
 var cheerio = require('cheerio');
 var _request = require('request');
 var iconv  = require('iconv-lite');
+var stockData = require('../../stock.json');
 
 module.exports = {
     getStock(){
-        var stocks = [
-        {
-            title:'台積電',
-            code:'2330'
-        },
-        {
-            title:'佳必琪',
-            code:'6197'
-        },
-        {
-            title:'鴻準',
-            code:'2354'
-        },
-        {
-            title:'銘異',
-            code:'3060'
-        }];
-   
+        var stocks = stockData.stocks;
+
         var promiseList =[];
         stocks.forEach(function(val, index){
 
