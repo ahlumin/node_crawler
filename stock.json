@@ -2,19 +2,23 @@
     "stocks":[
         {
             "title":"台積電",
-            "code":"2330"
+            "code":"2330",
+            "trigger":"200"
         },
         {
             "title":"佳必琪",
-            "code":"6197"
+            "code":"6197",
+            "trigger":"100"
         },
         {
             "title":"鴻準",
-            "code":"2354"
+            "code":"2354",
+            "trigger":"100"
         },
         {
             "title":"銘異",
-            "code":"3060"
+            "code":"3060",
+            "trigger":"100"
         }
     ]
 }

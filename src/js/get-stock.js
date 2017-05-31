@@ -1,12 +1,9 @@
 var cheerio = require('cheerio');
 var _request = require('request');
 var iconv  = require('iconv-lite');
-var stockData = require('../../stock.json');
 
 module.exports = {
-    getStock(){
-        var stocks = stockData.stocks;
-
+    getStock(stocks){
         var promiseList =[];
         stocks.forEach(function(val, index){
 
@@ -20,6 +17,7 @@ module.exports = {
                         $ = cheerio.load(iconv.decode(new Buffer(body), "big5"));
                         var tdList = $('td[bgcolor="#FFFfff"]');
                         resolve({
+                            code:val.code,
                             title:val.code + val.title,
                             transaction:$(tdList[1]).text(),            //成交
                             buy:$(tdList[2]).text(),                    //買進
@@ -29,6 +27,7 @@ module.exports = {
                             open:$(tdList[7]).text(),                   //開盤
                             highest:$(tdList[8]).text(),                //最高
                             lowest:$(tdList[9]).text(),                 //最低
+                            trigger:val.trigger
                         });
                     }
                     else
