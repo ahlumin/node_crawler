@@ -2,7 +2,7 @@
   "name": "sotck_graber",
   "version": "1.0.0",
   "description": "",
-  "main": "app-config.js",
+  "main": "run.js",
   "scripts": {
     "start": "node run.js"
   },
