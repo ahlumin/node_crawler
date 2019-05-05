@@ -35,6 +35,7 @@ app.get('/get-data', function(req, res){
     });
 })
 
-http.createServer(app).listen(443, '127.0.0.1', function(){
+const port = process.env.PORT || 5168;
+http.createServer(app).listen(port, '127.0.0.1', function(){
     console.log('nodejs server has been started...')
 });
