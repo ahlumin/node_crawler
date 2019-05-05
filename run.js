@@ -1,10 +1,8 @@
 var http = require('http');
 var path = require('path');
 var express = require('express');
-var nodemailer = require('nodemailer');
 var Stock = require('./src/js/get-stock');
 var stockSource = require('./stock.json');
-var mailHelper = require('./mailHelper.js');
 
 // 載入要監看的目標，設定發送通知預設值(false)
 let stockData = stockSource.stocks.map((cur,idx,arr)=>{
@@ -29,7 +27,6 @@ app.get('/get-data', function(req, res){
 
             var item = val.find((el,idx)=> cur.code === el.code);
             if(parseFloat(item.transaction) >= parseFloat(cur.trigger)){
-                mailHelper.send(cur.code, cur.title, cur.trigger);
                 cur.isSend = true;
             }
         });
