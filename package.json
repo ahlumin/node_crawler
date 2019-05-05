@@ -8,13 +8,11 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "cheerio": "^0.22.0",
     "express": "^4.14.0",
     "iconv-lite": "^0.4.15",
+    "nodemailer": "^4.0.1",
     "request": "^2.79.0"
-  },
-  "dependencies": {
-    "nodemailer": "^4.0.1"
   }
 }
